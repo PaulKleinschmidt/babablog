@@ -2,7 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   newPost: {
-    title: null
+    title: null,
+    content: null
   },
   actions: {
     createPost(post) {
