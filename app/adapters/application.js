@@ -15,6 +15,7 @@ export default ActiveModelAdapter.extend({
       if (token) {
         headers.Authorization = `Token token=${token}`;
       }
+      console.log(headers)
 
       return headers;
     },

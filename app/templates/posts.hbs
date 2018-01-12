@@ -1,6 +1,7 @@
 {{#each model as |post|}}
   <h1>{{post.title}}</h1>
-  <h2>{{post.content}}</h2>
+  <h3>{{post.content}}</h3>
+  {{blog-post post=post}}
 {{/each}}
 
 {{outlet}}
