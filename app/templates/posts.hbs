@@ -1,9 +1,12 @@
 {{new-post-form createPost='createPost'}}
 
 {{#each model as |post|}}
-  <h1>{{post.title}}</h1>
+
+  <h1>{{#link-to 'post' post}} {{post.title}} {{/link-to}}</h1>
   <h3>{{post.content}}</h3>
+  {{!-- BLOG POST SHOULD HAVE BEEN NAMED DELETE BUTTON --}}
   {{blog-post post=post}}
+
 {{/each}}
 
 {{outlet}}

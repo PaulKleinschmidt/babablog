@@ -1,0 +1,8 @@
+<h1>{{post.title}}</h1>
+<h3>{{post.content}}</h3>
+
+<form {{action 'updatePost' on='submit'}} >
+  {{input value=newPost.title placeholder='Title'}}
+  {{input value=newPost.content placeholder='Content'}}
+  <button type="submit">update</button>
+</form>
