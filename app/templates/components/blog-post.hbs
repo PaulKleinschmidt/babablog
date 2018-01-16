@@ -1,1 +1,4 @@
-<button {{action 'deletePost' post}}>delete dis</button>
+
+{{#if post.editable}}
+<button class="delete-button" {{action 'deletePost' post}}>delete dis</button>
+{{/if}}

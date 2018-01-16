@@ -1,9 +1,11 @@
 <h1>{{post.title}}</h1>
 <h3>{{post.content}}</h3>
 
+{{#if post.editable}}
 <form {{action 'updatePost' on='submit'}} >
   {{input value=post.title placeholder='Title'}}
   {{textarea value=post.content placeholder='Content'}}
   <button class="submit" type="submit">Save</button>
   {{message}}
 </form>
+{{/if}}
