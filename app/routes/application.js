@@ -3,12 +3,14 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   auth: Ember.inject.service(),
   flashMessages: Ember.inject.service(),
-
+  beforeModel() {
+    this.transitionTo('posts');
+  },
   actions: {
     signOut () {
       this.get('auth').signOut()
         .then(() => this.get('store').unloadAll())
-        .then(() => this.transitionTo('sign-in'))
+        .then(() => this.transitionTo('posts'))
         .then(() => {
           this.get('flashMessages').warning('You have been signed out.');
         })

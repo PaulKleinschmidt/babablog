@@ -1,3 +1,4 @@
+{{#if auth.isAuthenticated}}
 <h3>New Post</h3>
 <form {{action 'createPost' on='submit'}} >
   {{input value=newPost.title placeholder='Title'}}
@@ -5,3 +6,6 @@
   <button class="submit" type="submit">Publish</button>
   {{message}}
 </form>
+{{else}}
+<h1>Sign in to Post</h1>
+{{/if}}

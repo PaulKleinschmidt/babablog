@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   classNames: ['newPost'],
+  auth: Ember.inject.service(),
+  test: false,
   newPost: {
     title: null,
     content: null

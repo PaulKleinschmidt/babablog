@@ -4,8 +4,16 @@ export default Ember.Route.extend({
   model () {
     return this.get('store').findAll('post')
   },
+  auth: Ember.inject.service(),
+  test: true,
+
+  // user: Ember.computed.alias('auth.credentials.email'),
+  // isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
+  // signedIn: Ember.computed.alias('session.isAuthenticated'),
+  // isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
   actions: {
     createPost(post) {
+      console.log('am i Authenticated? ', this.get('auth.isAuthenticated'))
       let newPost = this.get('store').createRecord('post', post);
       newPost.save();
     },
