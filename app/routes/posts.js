@@ -8,6 +8,9 @@ export default Ember.Route.extend({
     createPost(post) {
       let newPost = this.get('store').createRecord('post', post);
       newPost.save();
+    },
+    updatePost(post) {
+      console.log('hello!')
     }
   }
 });
