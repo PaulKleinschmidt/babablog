@@ -3,6 +3,6 @@
 
 <form {{action 'updatePost' on='submit'}} >
   {{input value=post.title placeholder='Title'}}
-  {{input value=post.content placeholder='Content'}}
+  {{textarea value=post.content placeholder='Content'}}
   <button type="submit">update</button>
 </form>

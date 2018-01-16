@@ -1,2 +1,33 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+
+button {
+  font-family: Lato, sans-serif;
+  border: 1px solid #c0392b;
+  text-decoration: none;
+  border-radius: 18px;
+  padding: 7px 32px;
+  background: #fff;
+  color: #c0392b;
+}
+
+.submit:hover {
+  border-color: #e74c3c;
+  color: #fff;
+  background-color: #e74c3c;
+}
+
+textarea:focus, input:focus, button:focus {
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type=text], textarea {
+  width: calc(100% - 5px);
+  font-size: 0.75em;
+  padding: 10px;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+textarea {
+  margin-top: 10px;
+}

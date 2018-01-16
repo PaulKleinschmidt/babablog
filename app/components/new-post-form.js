@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  className: "submit",
   newPost: {
     title: null,
     content: null
