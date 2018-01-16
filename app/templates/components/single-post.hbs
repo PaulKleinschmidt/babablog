@@ -4,5 +4,6 @@
 <form {{action 'updatePost' on='submit'}} >
   {{input value=post.title placeholder='Title'}}
   {{textarea value=post.content placeholder='Content'}}
-  <button type="submit">update</button>
+  <button class="submit" type="submit">Save</button>
+  {{message}}
 </form>

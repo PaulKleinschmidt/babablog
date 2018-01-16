@@ -1,7 +1,7 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
-button {
+.submit {
   font-family: Lato, sans-serif;
   border: 1px solid #c0392b;
   text-decoration: none;
@@ -9,6 +9,13 @@ button {
   padding: 7px 32px;
   background: #fff;
   color: #c0392b;
+}
+
+.newPost {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 30px;
+  margin: 40px;
 }
 
 .submit:hover {
@@ -27,6 +34,7 @@ input[type=text], textarea {
   padding: 10px;
   line-height: 1.5;
   margin: 10px 0;
+  max-width: calc(100% - 5px);
 }
 textarea {
   margin-top: 10px;

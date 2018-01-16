@@ -1,16 +1,22 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  className: "submit",
+  classNames: ['newPost'],
   newPost: {
     title: null,
     content: null
   },
+  message: null,
   actions: {
     createPost(post) {
-      this.sendAction('createPost', this.get('newPost'));
-      console.log(this.get('newPost.title'))
-      this.set('newPost.title', null)
+      if ((this.get('newPost.title') !== null) && (this.get('newPost.content') !== null)) {
+        this.sendAction('createPost', this.get('newPost'));
+        this.set('newPost.title', null)
+        this.set('newPost.content', null)
+        this.set('message', null)
+      } else {
+        this.set('message', 'please fill in both fields :)')
+      }
     }
   }
 });
