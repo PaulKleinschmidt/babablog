@@ -9,3 +9,7 @@
   {{message}}
 </form>
 {{/if}}
+
+{{#each post.comments as |comment|}}
+  {{single-post/comment comment=comment}}
+{{/each}}

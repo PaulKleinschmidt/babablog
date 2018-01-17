@@ -1,8 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model () {
+  model (params) {
     return this.get('store').findAll('post')
+    return this.get('store').findRecord('post', params.post_id, {include: 'comments'});
   },
   auth: Ember.inject.service(),
   test: true,
