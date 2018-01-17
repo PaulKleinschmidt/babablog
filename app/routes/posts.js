@@ -14,12 +14,9 @@ export default Ember.Route.extend({
   // isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
   actions: {
     createPost(post) {
-      console.log('am i Authenticated? ', this.get('auth.isAuthenticated'))
+      console.log(post)
       let newPost = this.get('store').createRecord('post', post);
       newPost.save();
-    },
-    updatePost(post) {
-      console.log('hello!')
     }
   }
 });

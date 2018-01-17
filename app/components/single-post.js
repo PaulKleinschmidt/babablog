@@ -10,6 +10,10 @@ export default Ember.Component.extend({
       } else {
         this.set('message', 'please fill in both fields :)')
       }
+    },
+    createComment(comment, post) {
+      console.log(comment)
+      this.sendAction('createComment', comment, post);
     }
   }
 });

@@ -10,7 +10,9 @@
 </form>
 {{/if}}
 
+{{new-comment-form post=post createComment='createComment'}}
+
 <h4>{{post.comments.length}}<span> comments</span></h4>
 {{#each post.comments as |comment|}}
-  {{single-post/comment comment=comment}}
+  {{single-post/comment comment=comment createComment='createComment'}}
 {{/each}}
