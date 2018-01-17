@@ -10,6 +10,7 @@
 </form>
 {{/if}}
 
+<h4>{{post.comments.length}}<span> comments</span></h4>
 {{#each post.comments as |comment|}}
   {{single-post/comment comment=comment}}
 {{/each}}
