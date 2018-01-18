@@ -65,6 +65,16 @@ textarea {
   margin-top: 10px;
 }
 
+.new-post-content {
+  width: calc(100% - 5px);
+  font-size: 0.75em;
+  padding: 10px;
+  line-height: 1.5;
+  height: 200px;
+  margin: 10px 0;
+  max-width: calc(100% - 5px);
+}
+
 .updateformhidden :not(:first-child) {
   display: none;
 }

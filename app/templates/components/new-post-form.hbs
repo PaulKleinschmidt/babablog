@@ -2,7 +2,7 @@
 <h3>New Post</h3>
 <form {{action 'createPost' on='submit'}} >
   {{input value=newPost.title placeholder='Title'}}
-  {{textarea value=newPost.content placeholder='Content'}}
+  {{textarea class="new-post-content" value=newPost.content placeholder='Content'}}
   <button class="submit" type="submit">Publish</button>
   {{message}}
 </form>
