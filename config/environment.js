@@ -52,7 +52,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/babablog';
     ENV.locationType = 'hash';
-    ENV.apiHost = 'https://quiet-stream-81739.herokuapp.com/';
+    ENV.apiHost = 'https://quiet-stream-81739.herokuapp.com';
   }
 
   return ENV;
