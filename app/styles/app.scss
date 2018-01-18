@@ -2,7 +2,7 @@
 @import 'bootstrap/theme';
 
 body {
-  width: 60%;
+  width: 70%;
   margin-left: 20%;
   font-family: 'Merriweather', serif;
   font-weight: 300;
@@ -15,7 +15,9 @@ body {
 
 .sign-in-to-post {
   text-align: center;
-  color: #c0392b;
+  color: gray;
+  font-size: 20px;
+  font-style: oblique;
 
 }
 
@@ -24,7 +26,9 @@ body {
   border: 1px solid #c0392b;
   text-decoration: none;
   border-radius: 18px;
-  padding: 7px 32px;
+  padding: 7px 15px;
+  font-size: 10px;
+  margin-bottom: 50px;
   background: #fff;
   color: #c0392b;
 }
@@ -38,13 +42,6 @@ body {
   color: #c0392b;
   font-size: 10px;
 }
-
-// .newPost {
-//   border: 1px solid black;
-//   border-radius: 5px;
-//   padding: 30px;
-//   margin: 40px;
-// }
 
 .submit:hover {
   border-color: #e74c3c;
@@ -71,21 +68,24 @@ textarea {
 .updateformhidden :not(:first-child) {
   display: none;
 }
+//
+// .update-post-hidden :not(:first-child) {
+//   display: none;
+// }
 
 .edit-comment {
   font-family: Lato, sans-serif;
-  border: 1px solid green;
+  border: 1px;
   text-decoration: none;
   border-radius: 18px;
   padding: 3px 15px;
   background: #fff;
-  color: green;
+  color: gray;
   font-size: 10px;
 }
 .comment-buttons {
   // margin: 0px 0;
   margin: 5px;
-  font-weight: bold;
   display: inline-flex;
   flex-direction: row;
   flex-direction: row;
@@ -94,6 +94,34 @@ textarea {
 
 .comment {
   font-size: 14px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.comment-count {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-style: oblique;
+  float: right;
+}
+
+
+.alert {
+  width: 70%;
+  // align: center;
+  margin: 0 auto;
+}
+
+.singlepost {
+  // background-color: #ececec;
+  padding: 10px;
+  box-shadow: 0px 1px rgba(1,1,1,.5);
+}
+
+.single-post-content {
+  color: #565656;
+}
+
+.single-post-title {
 }

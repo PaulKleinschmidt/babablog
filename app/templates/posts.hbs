@@ -1,12 +1,12 @@
 
 {{new-post-form createPost='createPost'}}
 
-
 {{#each model as |post|}}
-
+<legend>
   <h4>{{#link-to 'post' post}} {{post.title}} {{/link-to}}</h4>
   <h5>{{post.content}}</h5>
   {{blog-post post=post}}
+</legend>
 
 {{/each}}
 {{outlet}}

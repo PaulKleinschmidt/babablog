@@ -6,7 +6,6 @@ export default Ember.Component.extend({
   updateformhidden: true,
   actions: {
     updateComment(comment) {
-      console.log('hello from update-comment')
         if (this.get('comment.text').length > 0) {
           this.sendAction('updateComment', this.get('comment'));
           return this.toggleProperty('updateformhidden');

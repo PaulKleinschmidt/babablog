@@ -1,7 +1,10 @@
-<h1>{{post.title}}</h1>
-<h3>{{post.content}}</h3>
+<div class='singlepost'>
+<h2 class='single-post-title'>{{post.title}}</h2>
+<h4 class='single-post-content'>{{post.content}}</h4>
+</div>
 
 {{#if post.editable}}
+<h4 class="edit-post">edit post</h4>
 <form {{action 'updatePost' on='submit'}} >
   {{input value=post.title placeholder='Title'}}
   {{textarea value=post.content placeholder='Content'}}
@@ -10,9 +13,14 @@
 </form>
 {{/if}}
 
+<div class="dont-hide">
+
 {{new-comment-form post=post createComment='createComment'}}
 
-<h4>{{post.comments.length}}<span> comments</span></h4>
+<h4 class="comment-count">{{post.comments.length}}<span> comments</span></h4>
+<br><br>
 {{#each post.comments as |comment|}}
   {{single-post/comment comment=comment createComment='createComment'}}
 {{/each}}
+
+</div>

@@ -5,8 +5,6 @@ export default Ember.Component.extend({
   message: null,
   actions: {
     updateComment(comment) {
-      console.log(this.get('comment'))
-      console.log('hello from single-post')
       this.sendAction('updateComment', this.get('comment'));
     },
     updatePost(post) {
