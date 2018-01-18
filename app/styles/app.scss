@@ -67,3 +67,33 @@ input[type=text], textarea {
 textarea {
   margin-top: 10px;
 }
+
+.updateformhidden :not(:first-child) {
+  display: none;
+}
+
+.edit-comment {
+  font-family: Lato, sans-serif;
+  border: 1px solid green;
+  text-decoration: none;
+  border-radius: 18px;
+  padding: 3px 15px;
+  background: #fff;
+  color: green;
+  font-size: 10px;
+}
+.comment-buttons {
+  // margin: 0px 0;
+  margin: 5px;
+  font-weight: bold;
+  display: inline-flex;
+  flex-direction: row;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.comment {
+  font-size: 14px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

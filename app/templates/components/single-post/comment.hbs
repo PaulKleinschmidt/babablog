@@ -1,2 +1,5 @@
-<span class="comment"> > {{comment.text}}</span>
-{{delete-comment comment=comment}}
+<legend>
+<div class="comment"> > {{comment.text}}</div>
+
+<div class="comment-buttons"> {{delete-comment comment=comment}}{{update-comment updateComment='updateComment' comment=comment}} </div>
+</legend>
