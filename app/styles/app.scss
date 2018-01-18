@@ -77,7 +77,7 @@ textarea {
   font-family: Lato, sans-serif;
   border: 1px;
   text-decoration: none;
-  border-radius: 18px;
+  // border-radius: 18px;
   padding: 3px 15px;
   background: #fff;
   color: gray;
@@ -115,6 +115,8 @@ textarea {
 
 .singlepost {
   // background-color: #ececec;
+  margin-top: 50px;
+  margin-bottom: 100px;
   padding: 10px;
   box-shadow: 0px 1px rgba(1,1,1,.5);
 }
@@ -123,5 +125,25 @@ textarea {
   color: #565656;
 }
 
-.single-post-title {
+.delete-post {
+  font-family: Lato, sans-serif;
+  text-decoration: none;
+  float: right;
+  clear: left;
+  // border: none;
+  background: #fff;
+  color: gray;
+  font-size: 10px;
+
+}
+
+.user-display {
+  float: right;
+  font-size: 15px;
+  font-style: italic;
+  clear: both;
+}
+
+.user {
+  font-size: 20px;
 }

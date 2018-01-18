@@ -1,12 +1,16 @@
 
 {{new-post-form createPost='createPost'}}
 
+
 {{#each model as |post|}}
 <legend>
+  {{display-user user=post.user}}
   <h4>{{#link-to 'post' post}} {{post.title}} {{/link-to}}</h4>
+  <span>{{blog-post post=post}}</span>
   <h5>{{post.content}}</h5>
-  {{blog-post post=post}}
-</legend>
+    </legend>
+
+
 
 {{/each}}
 {{outlet}}

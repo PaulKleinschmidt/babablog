@@ -5,5 +5,6 @@ export default DS.Model.extend({
   content: DS.attr('string'),
   comments: DS.hasMany('comment'),
   editable: DS.attr('boolean'),
-  user_id: DS.attr('number')
+  user_id: DS.attr('number'),
+  user: DS.belongsTo('user')
 });
