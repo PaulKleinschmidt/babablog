@@ -7,13 +7,13 @@ export default Ember.Component.extend({
   },
   message: null,
   actions: {
-    createComment(comment) {
+    createComment() {
       if ((this.get('newComment.text') !== null)) {
         this.sendAction('createComment', this.get('newComment'), this.get('post'));
-        this.set('newComment.text', null)
-        this.set('message', null)
+        this.set('newComment.text', null);
+        this.set('message', null);
       } else {
-        this.set('message', 'Write a comment before submitting')
+        this.set('message', 'Write a comment before submitting');
       }
     }
   }

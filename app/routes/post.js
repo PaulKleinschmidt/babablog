@@ -9,13 +9,13 @@ export default Ember.Route.extend({
   actions: {
     updatePost(post) {
       post.save();
-      this.get('flashMessages').success('Post Updated')
+      this.get('flashMessages').success('Post Updated');
     },
     createComment(comment, post) {
       let newComment = this.get('store').createRecord('comment', comment);
       post.get('comments').pushObject(newComment);
-      newComment.save()
-      this.get('flashMessages').success('comment posted')
+      newComment.save();
+      this.get('flashMessages').success('comment posted');
     }
   }
 });
