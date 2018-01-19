@@ -12,6 +12,11 @@ export default Ember.Route.extend({
       let newPost = this.get('store').createRecord('post', post);
       newPost.save();
       this.get('flashMessages').success('New Post Published');
+    },
+    addLike(post) {
+      this.get('store').createRecord('like', {post:post}).save();
+      // post.get('likes').pushObject(newLike);
+      // newLike.save();
     }
   }
 });

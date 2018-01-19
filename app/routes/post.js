@@ -16,6 +16,9 @@ export default Ember.Route.extend({
       post.get('comments').pushObject(newComment);
       newComment.save();
       this.get('flashMessages').success('comment posted');
+    },
+    addlike(post) {
+      console.log('hello')
     }
   }
 });
