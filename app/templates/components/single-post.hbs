@@ -21,7 +21,7 @@
 <h4 class="comment-count">{{post.comments.length}}<span> comments</span></h4>
 <br><br>
 {{#each post.comments as |comment|}}
-  {{single-post/comment comment=comment createComment='createComment'}}
+  {{single-post/comment post=post comment=comment createComment='createComment'}}
 {{/each}}
 
 </div>
