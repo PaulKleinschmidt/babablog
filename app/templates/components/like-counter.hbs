@@ -1,3 +1,10 @@
-{{likes.length}}
-{{post}}
+{{likes.length}} <p>Likes!</p>
+
+{{#each likes as |like|}}
+{{like.user.email}}
+{{/each}}
+
+
+{{!-- {{#if likes.editable}} --}}
 <button {{action 'addLike' post}}>like!</button>
+{{!-- {{/if}} --}}
