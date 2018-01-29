@@ -1,10 +1,20 @@
-{{likes.length}} <p>Likes!</p>
+<span>+{{likes.length}}</span>
 
+{{!-- Display users who liked post --}}
+{{!-- Liked by:
 {{#each likes as |like|}}
 {{like.user.email}}
+{{/each}} --}}
+
+{{#each likes as |like|}}
+  {{#if like.editable}}
+    {{toggleLikedByUser}}
+  {{/if}}
 {{/each}}
 
-
-{{!-- {{#if likes.editable}} --}}
-<button {{action 'addLike' post}}>like!</button>
-{{!-- {{/if}} --}}
+{{#if likedByUser}}
+<h4>you liked this post already</h4>
+<button {{action 'deleteLike' likes}}>unlike</button>
+{{else}}
+<button {{action 'addLike' post}}>like</button>
+{{/if}}
