@@ -9,10 +9,12 @@ export default Ember.Component.extend({
   actions: {
     addLike(post) {
       this.sendAction('addLike', post)
-      // like.save();
+      this.toggleProperty('likedByUser')
     },
-    deleteLike(likes) {
-
+    deleteLike(like) {
+      like.deleteRecord();
+      like.save()
+      this.toggleProperty('likedByUser')
     }
   }
 });

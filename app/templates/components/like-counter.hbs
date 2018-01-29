@@ -8,13 +8,12 @@
 
 {{#each likes as |like|}}
   {{#if like.editable}}
-    {{toggleLikedByUser}}
+    <button {{action 'deleteLike' like}}>unlike</button>
   {{/if}}
 {{/each}}
 
 {{#if likedByUser}}
-<h4>you liked this post already</h4>
-<button {{action 'deleteLike' likes}}>unlike</button>
+  <h4>you liked this post already</h4>
 {{else}}
-<button {{action 'addLike' post}}>like</button>
+  <button {{action 'addLike' post}}>like</button>
 {{/if}}

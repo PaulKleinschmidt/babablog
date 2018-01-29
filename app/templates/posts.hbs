@@ -4,7 +4,7 @@
 
 {{#each model as |post|}}
 <legend>
-  {{like-counter post=post likes=post.likes addLike='addLike'}}
+  {{like-counter post=post likes=post.likes addLike='addLike' like=like}}
   {{display-user user=post.user}}
   <h4>{{#link-to 'post' post}} {{post.title}} {{/link-to}}</h4>
   <span>{{blog-post post=post}}</span>
