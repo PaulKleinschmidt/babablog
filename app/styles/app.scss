@@ -2,7 +2,7 @@
 @import 'bootstrap/theme';
 
 body {
-  width: 70%;
+  max-width: 70%;
   margin-left: 20%;
   font-family: 'Merriweather', serif;
   font-weight: 300;
@@ -156,4 +156,27 @@ textarea {
 
 .user {
   font-size: 20px;
+}
+
+.like-button {
+  float: right;
+  font-family: Lato, sans-serif;
+  border: none;
+  text-decoration: none;
+  border-radius: 18px;
+  font-size: 20px;
+  background: #fff;
+  color: #c0392b;
+  z-index: 100;
+  margin-right: -35px;
+}
+// this is my solution to hiding the like button after user likes a post
+.delete-like-button {
+  opacity: .9;
+  float: right;
+  font-family: Lato, sans-serif;
+  border: none;
+  border-radius: 100px;
+  font-size: 20px;
+  z-index: 1000;
 }

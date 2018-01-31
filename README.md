@@ -1,74 +1,37 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# Authentication in Ember
+## babaBlog
 
-This training will involve a lot of following code and and exploring the
-Chrome Inspector and utilizing Ember Inspector.  It is recommended that you
-comment code or take notes.
+babaBlog is a blog web app for users to make posts and comment on other people's posts
 
-## Prerequisites
+This branch includes the 'like' feature. Users can like and unlike posts
 
--   [Ember Resources](https://github.com/ga-wdi-boston/ember-resources)
+Wireframe: https://imgur.com/8042b4d
+ERD: https://imgur.com/KcjuJkl
+Screenshot: ![Screenshot](https://i.imgur.com/SVPl19S.png "screenshot")
 
-## Objectives
 
-By the end of this, developers should be able to:
 
--   Implement token authentication in an Ember application.
--   Enforce authentication in protected routes.
+backend deployed: https://quiet-stream-81739.herokuapp.com/
+client deployed: https://paulkleinschmidt.github.io/babablog/#/posts
 
-## Preparation
+## Technologies Used
+Ember.js
+CSS
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
-    this repository.
-1.  Install dependencies with `npm install` and `bower install`.
-1.  Start any API based on a recent version of the [Rails API
-    Template](https://github.com/ga-wdi-boston/rails-api-template) or the
-    [Express API
-    Template](https://github.com/ga-wdi-boston/express-api-template).
-1.  Start the front-end server with `ember server`.
+## Likes
+The likes feature is currently working in this branch. Users can incriment the like counter next to a post on the /posts route. It still needs tweaking, as I could not find a good way to hide the like button once a user likes a post. This was the biggest struggle when building this feature. I opened a thread on StackOverflow, and was stuck for a little while on validating if a user had already liked a post. While I didn't end up using either, I learned more about javascript localStorage and Ember computed properties. In the end, I used css properties to hide the button. It's not perfect yet but it works.
 
-## From end to end
+## How its made
+babaBlog is my first project using Ember.js. I started by building the api on rails. After adding a new resource, I set up the components and routes needed on the front end. I followed the data down, action up process to make my changes on the front end persist to the database. I divided my views up into components as much as possible. After completing the first resource, I added the comments resource so that users could comment on posts.
 
-Watch as I sign up for a new account on our demo app.
+## Whats Next?
 
-*Other than the flash messages on the page, did anything change?  What about in
-the Chrome Developer Tools?*
+I have been working on a likes resource that I hope to have done in the future. I would like users to be able to like posts and comments. I would also like to have a way of sorting posts
 
-Take some time and sign in on your own, and check to see if anything in the
-Chrome Dev Tools has changed.
+## User Stories
 
-Now that we have added a key tool to our personal developer toolkit lets look
-at how it's implemented.
-
-## Follow Along
-
-Let's walk through file by file to see what's happening.  I will ask
-developers to guide me through the files while correcting any misunderstandings.
-
-First let's start down the template and component trail, then we'll work our way
-up with actions.
-
-*Remember: Data down, actions up.*
-
-While going up the Ember hierarchy we may need to stop a some point to discuss
-services.
-
-## Additional Resources
-
--   [Implementing Authentication with Ember Services - Ember
-    Igniter](http://emberigniter.com/implementing-authentication-with-ember-services/)
--   [jpadilla/ember-simple-auth-token: Ember Simple Auth extension that is
-    compatible with token-based authentication like
-    JWT.](https://github.com/jpadilla/ember-simple-auth-token)
--   [simplabs/ember-simple-auth: A library for implementing
-    authentication/authorization in Ember.js
-    applications.](https://github.com/simplabs/ember-simple-auth)
--   [Create your first Ember 2.0 app: From authentication to calling an
-    API](https://auth0.com/blog/2015/08/11/create-your-first-ember-2-dot-0-app-from-authentication-to-calling-an-api/)
-
-## [License](LICENSE)
-
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+As a user, I want to be able to sign up, in, and out
+As a user, I want to be able to post something on the blog
+As a user, I want to be able to comment on a post
+As a user, I want to see the emails of who is posting
+As a user, I want to update and delete my posts

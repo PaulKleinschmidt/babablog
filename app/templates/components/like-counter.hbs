@@ -1,19 +1,33 @@
 <span>+{{likes.length}}</span>
 
-{{!-- Display users who liked post --}}
+
+
+
+{{#if auth.isAuthenticated}}
+
+
+{{!-- Uncomment to Display users who liked post --}}
+
+
 {{!-- Liked by:
 {{#each likes as |like|}}
 {{like.user.email}}
 {{/each}} --}}
 
+{{!-- Check if a like has an editable property. If it does, display deleteLike button --}}
+
 {{#each likes as |like|}}
   {{#if like.editable}}
-    <button {{action 'deleteLike' like}}>unlike</button>
-  {{/if}}
+    <button class="delete-like-button" {{action 'deleteLike' like}}>👎</button>
+
+    {{else}}
+    {{/if}}
 {{/each}}
 
-{{#if likedByUser}}
-  <h4>you liked this post already</h4>
-{{else}}
-  <button {{action 'addLike' post}}>like</button>
+
+
+
+{{#unless likedByUser}}
+  <button class="like-button" {{action 'addLike' post}}>👍</button>
+{{/unless}}
 {{/if}}
