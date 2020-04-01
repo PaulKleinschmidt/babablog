@@ -2,7 +2,6 @@
 
 babaBlog is a blog web app for users to make posts and comment on other people's posts
 
-Wireframe: https://imgur.com/8042b4d
 ![Screenshot](https://i.imgur.com/jocYhm3.png "screenshot")
 
 
